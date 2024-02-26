@@ -19,13 +19,13 @@ from utils import CONFIG, TARGET_CONN_ID, TARGET_HOOK, \
 
 
 default_args = {
-    "owner": "rzv_de",
+    "owner": "nbeyger",
     "depends_on_past": False,
     "start_date": datetime(2024, 1, 19, 12, 0, 0, tzinfo=pendulum.timezone("UTC")),
     "retries": 3,
     "retry_delay": timedelta(seconds=10),
     "catchup": False,
-    "tags": ["rzv_de", "stg"],
+    "tags": ["bnm_de", "stg"],
 }
 
 @dag(default_args=default_args, description="ETL pipeline to load staging data from multiple sources", schedule_interval="*/3 * * * *", catchup=False)

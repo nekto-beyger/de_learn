@@ -22,6 +22,7 @@ CONFIG = Variable.get("load_data_conf", deserialize_json=True)
 TARGET_CONN_ID = "dwh_conn"
 TARGET_HOOK = PostgresHook(postgres_conn_id=TARGET_CONN_ID)
 
+print(CONFIG)
 
 def get_columns(table:str, schema:str) -> list[str]:
         """ Returns list of "column datatype" definitions. """
